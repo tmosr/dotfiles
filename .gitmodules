@@ -19,3 +19,6 @@
 [submodule "vim/bundle/vim256-color"]
 	path = vim/bundle/vim256-color
 	url = https://github.com/noah/vim256-color.git
+[submodule "vim/bundle/Vim-R-plugin"]
+	path = vim/bundle/Vim-R-plugin
+	url = https://github.com/vim-scripts/Vim-R-plugin.git
