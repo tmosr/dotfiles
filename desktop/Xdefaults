@@ -1,0 +1,47 @@
+!-------------------------------------------------------------------------------
+!
+!	U R X V T - Settings
+!
+URxvt*geometry:		100x30
+URxvt*borderLess:	false
+URxvt*perl-ext-common:	default,clipboard
+URxvt*font:  		xft:Terminus:pixelsize=10
+URxvt*depth:            32
+URxvt*background:       [85]#000000
+URxvt*foreground:       [100]#ffffff
+URxvt*scrollBar:        false
+URxvt*saveLines: 	5000
+URxvt*termName:    	rxvt-unicode-256color
+URxvt.perl-ext-common: 	default,matcher,tabbed
+URxvt.urlLauncher: 	firefox
+URxvt.matcher.button: 	1
+URxvt*borderColor:        #151515
+URxvt*colorBD:            #ffffff
+!Pnevma1
+
+! black
+*color0: #2F2E2D
+*color0: #1c1b1b
+*color8: #4A4845
+*color8: #686560
+!red
+*color1: #A36666
+*color9: #D78787
+!green
+*color2: #8FA57E
+*color10: #A9BA9C
+!yellow
+*color3: #D7AF87
+*color11: #E4C9AF
+!blue
+*color4: #7FA5BD
+*color12: #A1BDCE
+!magenta
+*color5: #C79EC4
+*color13: #D7BEDA
+!cyan
+*color6: #8ADBB4
+*color14: #B1E7DD
+!white
+*color7: #D0D0D0
+*color15: #EFEFEF
