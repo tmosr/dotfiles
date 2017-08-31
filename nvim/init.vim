@@ -39,8 +39,6 @@ set smartindent   " set smart indent
 
 " matlab settings
 autocmd Filetype matlab setlocal ts=4 sw=4 expandtab
-autocmd BufEnter *.m    compiler mlint 
-
 
 " enable syntax highlighting
 syntax on
