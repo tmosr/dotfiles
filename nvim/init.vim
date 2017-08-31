@@ -18,6 +18,9 @@ Plug 'jalvesaq/Nvim-R'
 " fugitive
 Plug 'tpope/vim-fugitive'
 
+" Matlab
+Plug 'daeyun/vim-matlab'
+
 " Initialize plugin system
 call plug#end()
 
@@ -30,6 +33,11 @@ set tabstop=2		  " render TABs using this many spaces
 set shiftwidth=2	" identation amount for < and > commands
 set autoindent    " set autoindent
 set smartindent   " set smart indent
+
+" matlab settings
+autocmd Filetype matlab setlocal ts=4 sw=4 expandtab
+autocmd BufEnter *.m    compiler mlint 
+
 
 " enable syntax highlighting
 syntax on

@@ -22,13 +22,11 @@ do
 	sleep 10s
 done &
 
+# dmenu and aliases
+
 # do some autostarts
-udiskie &
-python2 /usr/bin/dropbox start -i &
 iceweasel &
-icedove &
-
-
+freeplane &
 
 # Run dwm
 exec dwm
