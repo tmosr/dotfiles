@@ -21,6 +21,9 @@ Plug 'tpope/vim-fugitive'
 " Matlab
 Plug 'daeyun/vim-matlab'
 
+" Syntastic
+Plug 'vim-syntastic/syntastic'
+
 " Initialize plugin system
 call plug#end()
 
