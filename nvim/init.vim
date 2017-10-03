@@ -55,3 +55,5 @@ let g:airline_theme='tomorrow'
 
 " vim-R settings
 let R_assign = 0 " disable automatic replacement of underscores
+let R_in_buffer = 0 " do not use buffer
+let R_term = 'urxvt' " use urxvt as external terminal
