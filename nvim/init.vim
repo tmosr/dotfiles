@@ -27,6 +27,13 @@ Plug 'vim-syntastic/syntastic'
 " Initialize plugin system
 call plug#end()
 
+" enable syntax highlighting
+syntax on
+
+" colorscheme
+set background=dark
+colorscheme lodestone
+
 " set ident
 filetype plugin indent on
 
@@ -37,16 +44,6 @@ set shiftwidth=2	" identation amount for < and > commands
 set autoindent    " set autoindent
 set smartindent   " set smart indent
 
-" matlab settings
-autocmd Filetype matlab setlocal ts=4 sw=4 expandtab
-
-" enable syntax highlighting
-syntax on
-
-" colorscheme
-set background=dark
-colorscheme lodestone
-
 " airline config
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -55,3 +52,10 @@ let g:airline_theme='tomorrow'
 
 " vim-R settings
 let R_assign = 0 " disable automatic replacement of underscores
+
+" highlighting of to long lines
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+
+" matlab settings
+autocmd Filetype matlab setlocal ts=4 sw=4 expandtab 
+autocmd Filetype matlab match OverLength /\%81v.\+/  
