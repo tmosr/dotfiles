@@ -52,6 +52,7 @@ let g:airline_theme='tomorrow'
 
 " vim-R settings
 let R_assign = 0 " disable automatic replacement of underscores
+<<<<<<< HEAD
 
 " highlighting of to long lines
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -59,3 +60,7 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 " matlab settings
 autocmd Filetype matlab setlocal ts=4 sw=4 expandtab 
 autocmd Filetype matlab match OverLength /\%81v.\+/  
+=======
+let R_in_buffer = 0 " do not use buffer
+let R_term = 'urxvt' " use urxvt as external terminal
+>>>>>>> 137213f12ee1dbec10148525cd24e70e5fdcb886
