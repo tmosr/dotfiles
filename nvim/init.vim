@@ -36,13 +36,14 @@ colorscheme lodestone
 
 " set ident
 filetype plugin indent on
+syntax enable
 
 set number        " enable line numbers
 set expandtab 	  " insert spaces instead of tab
 set tabstop=2		  " render TABs using this many spaces
 set shiftwidth=2	" identation amount for < and > commands
-set autoindent    " set autoindent
-set smartindent   " set smart indent
+set autoindent    " enable auto (stupid) indentation
+"set smartindent   " enable smart indentation
 
 " airline config
 let g:airline#extensions#tabline#left_sep = ' '
@@ -57,7 +58,12 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 autocmd Filetype matlab setlocal ts=4 sw=4 expandtab 
 autocmd Filetype matlab match OverLength /\%81v.\+/  
 
+" R indentation settings
+let r_indent_align_args = 0   " disable alignment of function args
+let r_indent_ess_comments = 1 " enable comment indenting
+
 " vim-R settings
 let R_assign = 0 " disable automatic replacement of underscores
 let R_in_buffer = 0 " do not use buffer
 let R_term = 'urxvt' " use urxvt as external terminal
+let R_indent_commented = 1 " 

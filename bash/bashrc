@@ -112,4 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# disable system bell in Xorg
+if [ -n "$DISPLAY" ]; then
+	xset b off
+fi
+
 export EDITOR=vim
