@@ -24,6 +24,9 @@ Plug 'daeyun/vim-matlab'
 " Syntastic
 Plug 'vim-syntastic/syntastic'
 
+" easy align for markdown tables
+Plug 'junegunn/vim-easy-align'
+
 " Initialize plugin system
 call plug#end()
 
@@ -67,3 +70,18 @@ let R_assign = 0 " disable automatic replacement of underscores
 let R_in_buffer = 0 " do not use buffer
 let R_term = 'urxvt' " use urxvt as external terminal
 let R_indent_commented = 1 " 
+
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+" Align GitHub-flavored Markdown tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
