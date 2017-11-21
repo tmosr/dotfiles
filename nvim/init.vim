@@ -8,19 +8,16 @@ Plug 'lodestone/lodestone.vim'
 " airline plugin
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 " GitGutter
 Plug 'jisaacks/GitGutter'
-
 " Vim-R
 Plug 'jalvesaq/Nvim-R'
-
+" rmarkdown support
+Plug 'vim-pandoc/vim-rmarkdown'
 " fugitive
 Plug 'tpope/vim-fugitive'
-
 " Matlab
 Plug 'daeyun/vim-matlab'
-
 " Syntastic
 Plug 'vim-syntastic/syntastic'
 
