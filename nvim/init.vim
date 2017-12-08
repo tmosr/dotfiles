@@ -14,13 +14,12 @@ Plug 'airblade/vim-gitgutter'
 
 " Vim-R
 Plug 'jalvesaq/Nvim-R'
-
+" rmarkdown support
+Plug 'vim-pandoc/vim-rmarkdown'
 " fugitive
 Plug 'tpope/vim-fugitive'
-
 " Matlab
 Plug 'daeyun/vim-matlab'
-
 " Syntastic
 Plug 'vim-syntastic/syntastic'
 
