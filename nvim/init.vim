@@ -8,8 +8,10 @@ Plug 'lodestone/lodestone.vim'
 " airline plugin
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 " GitGutter
-Plug 'jisaacks/GitGutter'
+Plug 'airblade/vim-gitgutter'
+
 " Vim-R
 Plug 'jalvesaq/Nvim-R'
 " rmarkdown support
@@ -24,6 +26,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/vim-easy-align'
 " vim markdown
 Plug 'tpope/vim-markdown'
+
+" vim table mode
+Plug 'dhruvasagar/vim-table-mode'
 
 " Initialize plugin system
 call plug#end()
@@ -87,3 +92,7 @@ vnoremap <leader>P "+P
 
 " Align GitHub-flavored Markdown tables
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" settings for table mode
+"let g:table_mode_corner_corner='+'
+"let g:table_mode_header_fillchar='='
