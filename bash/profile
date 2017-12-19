@@ -24,3 +24,8 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# add custom cabal binary files to path
+if [ -d "$HOME/.cabal/bin" ] ; then
+  PATH="$HOME/.cabal/bin:$PATH"
+fi

@@ -20,9 +20,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'daeyun/vim-matlab'
 " Syntastic
 Plug 'vim-syntastic/syntastic'
-
 " easy align for markdown tables
 Plug 'junegunn/vim-easy-align'
+" vim markdown
+Plug 'tpope/vim-markdown'
 
 " Initialize plugin system
 call plug#end()
@@ -44,6 +45,10 @@ set tabstop=2		  " render TABs using this many spaces
 set shiftwidth=2	" identation amount for < and > commands
 set autoindent    " enable auto (stupid) indentation
 "set smartindent   " enable smart indentation
+
+" automatic text width
+set textwidth=80
+set formatoptions+=t
 
 " airline config
 let g:airline#extensions#tabline#left_sep = ' '
