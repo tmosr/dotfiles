@@ -16,6 +16,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jalvesaq/Nvim-R'
 " rmarkdown support
 Plug 'vim-pandoc/vim-rmarkdown'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 " fugitive
 Plug 'tpope/vim-fugitive'
 " Matlab
@@ -96,3 +98,7 @@ au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 " settings for table mode
 "let g:table_mode_corner_corner='+'
 "let g:table_mode_header_fillchar='='
+"
+
+" vim-pandoc settings
+let g:pandoc#spell#default_langs = ['de_ch', 'en']
