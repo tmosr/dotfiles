@@ -3,3 +3,6 @@ R/lib
 nvim/shada
 nvim/swap
 nvim/plugins
+nvim/spell
+nvim/site/spell
+nvim/.netrwhist
