@@ -101,4 +101,7 @@ au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 "
 
 " vim-pandoc settings
-let g:pandoc#spell#default_langs = ['de_ch', 'en']
+let g:pandoc#spell#default_langs = ["de_ch", "en"]
+let g:pandoc#modules#enabled = ["formatting"]
+let g:pandoc#formatting#textwidth = 79
+let g:pandoc#formatting#mode = "sA"
