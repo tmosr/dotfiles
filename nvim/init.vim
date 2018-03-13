@@ -28,7 +28,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/vim-easy-align'
 
 " vim markdown Plug 
-'tpope/vim-markdown'
+Plug 'tpope/vim-markdown'
 
 " vim table mode
 Plug 'dhruvasagar/vim-table-mode'
@@ -102,7 +102,7 @@ au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 "
 
 " vim-pandoc settings
-let g:pandoc#spell#default_langs = ['de_ch', 'en']
-let g:pandoc#folding#level = 1
-let g:pandoc#modules#disabled = ["spell"]
-let g:pandoc#formatting#mode = 'sA'
+let g:pandoc#spell#default_langs = ["de_ch", "en"]
+let g:pandoc#modules#enabled = ["formatting"]
+let g:pandoc#formatting#textwidth = 79
+let g:pandoc#formatting#mode = "sA"
