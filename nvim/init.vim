@@ -1,4 +1,4 @@
-" start vim plug
+" start vim plug 
 call plug#begin('~/dotfiles/nvim/plugins')
 
 " install plugins
@@ -26,8 +26,9 @@ Plug 'daeyun/vim-matlab'
 Plug 'vim-syntastic/syntastic'
 " easy align for markdown tables
 Plug 'junegunn/vim-easy-align'
-" vim markdown
-Plug 'tpope/vim-markdown'
+
+" vim markdown Plug 
+'tpope/vim-markdown'
 
 " vim table mode
 Plug 'dhruvasagar/vim-table-mode'
@@ -102,3 +103,6 @@ au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " vim-pandoc settings
 let g:pandoc#spell#default_langs = ['de_ch', 'en']
+let g:pandoc#folding#level = 1
+let g:pandoc#modules#disabled = ["spell"]
+let g:pandoc#formatting#mode = 'sA'
