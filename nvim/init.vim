@@ -1,4 +1,4 @@
-" start vim plug
+" start vim plug 
 call plug#begin('~/dotfiles/nvim/plugins')
 
 " install plugins
@@ -29,7 +29,8 @@ Plug 'daeyun/vim-matlab'
 Plug 'vim-syntastic/syntastic'
 " easy align for markdown tables
 Plug 'junegunn/vim-easy-align'
-" vim markdown
+
+" vim markdown Plug 
 Plug 'tpope/vim-markdown'
 
 " vim table mode
