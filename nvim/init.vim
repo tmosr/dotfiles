@@ -2,6 +2,9 @@
 call plug#begin('~/dotfiles/nvim/plugins')
 
 " install plugins
+" CtrlP
+Plug 'kien/ctrlp.vim'
+
 " Color scheme
 Plug 'lodestone/lodestone.vim'
 
@@ -46,6 +49,7 @@ colorscheme lodestone
 filetype plugin indent on
 syntax enable
 
+set scrolloff=3   " always show 3 lines
 set number        " enable line numbers
 set expandtab 	  " insert spaces instead of tab
 set tabstop=2		  " render TABs using this many spaces
