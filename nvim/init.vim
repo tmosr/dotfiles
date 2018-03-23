@@ -2,6 +2,10 @@
 call plug#begin('~/dotfiles/nvim/plugins')
 
 " install plugins
+
+" CtrlP
+Plug 'kien/ctrlp.vim'
+
 " Color scheme
 Plug 'lodestone/lodestone.vim'
 

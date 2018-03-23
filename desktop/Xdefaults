@@ -17,7 +17,7 @@ URxvt.urlLauncher: 	firefox
 URxvt.matcher.button: 	1
 URxvt*borderColor:        #151515
 URxvt*colorBD:            #ffffff
-!Pnevma1
+
 
 ! black
 *color0: #2F2E2D
@@ -34,7 +34,7 @@ URxvt*colorBD:            #ffffff
 *color3: #D7AF87
 *color11: #E4C9AF
 !blue
-*color4: #7FA5BD
+*color4: #2e6384
 *color12: #A1BDCE
 !magenta
 *color5: #C79EC4
@@ -45,3 +45,4 @@ URxvt*colorBD:            #ffffff
 !white
 *color7: #D0D0D0
 *color15: #EFEFEF
+
