@@ -1,4 +1,4 @@
-" start vim plug
+" start vim plug 
 call plug#begin('~/dotfiles/nvim/plugins')
 
 " install plugins
@@ -30,7 +30,8 @@ Plug 'daeyun/vim-matlab'
 Plug 'vim-syntastic/syntastic'
 " easy align for markdown tables
 Plug 'junegunn/vim-easy-align'
-" vim markdown
+
+" vim markdown Plug 
 Plug 'tpope/vim-markdown'
 
 " vim table mode
@@ -50,6 +51,7 @@ colorscheme lodestone
 filetype plugin indent on
 syntax enable
 
+set scrolloff=3   " always show 3 lines
 set number        " enable line numbers
 set expandtab 	  " insert spaces instead of tab
 set tabstop=2		  " render TABs using this many spaces
