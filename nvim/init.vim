@@ -2,6 +2,9 @@
 call plug#begin('~/dotfiles/nvim/plugins')
 
 " install plugins
+" dbext
+Plug 'vim-scripts/dbext.vim'
+
 " CtrlP
 Plug 'kien/ctrlp.vim'
 
@@ -110,3 +113,7 @@ let g:pandoc#spell#default_langs = ["de_ch", "en"]
 let g:pandoc#modules#enabled = ["formatting"]
 let g:pandoc#formatting#textwidth = 79
 let g:pandoc#formatting#mode = "sA"
+
+" db connection
+let g:dbext_default_profile_psql_feldarbeit = 'type=PGSQL:host=localhost:5432:dbname=feldarbeit:user=tobias'
+let g:dbext_default_profile = 'psql_feldarbeit'
