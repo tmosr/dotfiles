@@ -1,8 +1,10 @@
 " start vim plug 
 call plug#begin('~/dotfiles/nvim/plugins')
 
-" install plugins
-" CtrlP 
+" dbext
+Plug 'vim-scripts/dbext.vim'
+
+" CtrlP
 Plug 'kien/ctrlp.vim'
 
 " Color scheme
@@ -50,6 +52,7 @@ colorscheme lodestone
 filetype plugin indent on
 syntax enable
 
+set scrolloff=3   " always show 3 lines
 set number        " enable line numbers
 set expandtab 	  " insert spaces instead of tab
 set tabstop=2		  " render TABs using this many spaces
@@ -109,3 +112,7 @@ let g:pandoc#spell#default_langs = ["de_ch", "en"]
 let g:pandoc#modules#enabled = ["formatting"]
 let g:pandoc#formatting#textwidth = 79
 let g:pandoc#formatting#mode = "sA"
+
+" db connection
+let g:dbext_default_profile_psql_feldarbeit = 'type=PGSQL:host=localhost:5432:dbname=feldarbeit:user=tobias'
+let g:dbext_default_profile = 'psql_feldarbeit'

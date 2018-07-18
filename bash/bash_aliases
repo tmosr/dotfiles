@@ -1,0 +1,1 @@
+alias R="$(/usr/bin/which R) --no-save"
