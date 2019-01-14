@@ -1,6 +1,9 @@
 " start vim plug 
 call plug#begin('~/dotfiles/nvim/plugins')
 
+" jsdoc 
+Plug 'heavenshell/vim-jsdoc'
+
 " dbext
 Plug 'vim-scripts/dbext.vim'
 
@@ -25,6 +28,8 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 " fugitive
 Plug 'tpope/vim-fugitive'
+" surround
+Plug 'tpope/vim-surround'
 " Matlab
 Plug 'daeyun/vim-matlab'
 " Syntastic
@@ -37,6 +42,24 @@ Plug 'tpope/vim-markdown'
 
 " vim table mode
 Plug 'dhruvasagar/vim-table-mode'
+
+" js beautify
+Plug 'maksimr/vim-jsbeautify'
+
+" javascript
+Plug 'pangloss/vim-javascript'
+
+" javascript syntax
+Plug 'othree/javascript-libraries-syntax.vim'
+
+" angular snipptes
+Plug 'matthewsimo/angular-vim-snippets'
+
+" testing
+Plug 'claco/jasmine.vim'
+
+" typescript
+Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
@@ -115,4 +138,5 @@ let g:pandoc#formatting#mode = "sA"
 
 " db connection
 let g:dbext_default_profile_psql_feldarbeit = 'type=PGSQL:host=localhost:5432:dbname=feldarbeit:user=tobias'
+let g:dbext_default_profile_mysql_nism = 'type=MYSQL:host=server24.hostfactory.ch:3306:dbname=nism:user=tobias.moser:extra=--defaults-group-suffix=nism'
 let g:dbext_default_profile = 'psql_feldarbeit'
