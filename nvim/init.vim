@@ -140,3 +140,32 @@ let g:pandoc#formatting#mode = "sA"
 let g:dbext_default_profile_psql_feldarbeit = 'type=PGSQL:host=localhost:5432:dbname=feldarbeit:user=tobias'
 let g:dbext_default_profile_mysql_nism = 'type=MYSQL:host=server24.hostfactory.ch:3306:dbname=nism:user=tobias.moser:extra=--defaults-group-suffix=nism'
 let g:dbext_default_profile = 'psql_feldarbeit'
+
+" automatic minify of js files
+function Js_css_compress ()
+  let cwd = expand('<afile>:p:h')
+  let nam = expand('<afile>:t:r')
+  let ext = expand('<afile>:e')
+  if -1 == match(nam, "[\._]src$")
+    let minfname = nam.".min.".ext
+  else
+    let minfname = substitute(nam, "[\._]src$", "", "g").".".ext
+  endif
+  if ext == 'less'
+    if executable('lessc')
+      cal system( 'lessc '.cwd.'/'.nam.'.'.ext.' &')
+    endif
+  else
+    if filewritable(cwd.'/'.minfname)
+      if ext == 'js' && executable('closure-compiler')
+        cal system( 'closure-compiler --language_in ECMASCRIPT5 --js '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
+      elseif executable('yui-compressor')
+        cal system( 'yui-compressor '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
+      endif
+    endif
+  endif
+endfunction
+
+autocmd FileWritePost,BufWritePost *.js :call Js_css_compress()
+autocmd FileWritePost,BufWritePost *.css :call Js_css_compress()
+autocmd FileWritePost,BufWritePost *.less :call Js_css_compress()
