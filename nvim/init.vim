@@ -146,6 +146,7 @@ function Js_css_compress ()
   let cwd = expand('<afile>:p:h')
   let nam = expand('<afile>:t:r')
   let ext = expand('<afile>:e')
+  let home_path = $HOME
   if -1 == match(nam, "[\._]src$")
     let minfname = nam.".min.".ext
   else
@@ -157,8 +158,8 @@ function Js_css_compress ()
     endif
   else
     if filewritable(cwd.'/'.minfname)
-      if ext == 'js' && executable('closure-compiler')
-        cal system( 'closure-compiler --language_in ECMASCRIPT5 --js '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
+      if ext == 'js' && executable(home_path .'/.local/bin/closure-compiler')
+        cal system( home_path .'/.local/bin/closure-compiler --js '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
       elseif executable('yui-compressor')
         cal system( 'yui-compressor '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
       endif
