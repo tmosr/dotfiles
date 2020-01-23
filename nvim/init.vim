@@ -141,6 +141,7 @@ let g:dbext_default_profile_psql_feldarbeit = 'type=PGSQL:host=localhost:5432:db
 let g:dbext_default_profile_mysql_nism = 'type=MYSQL:host=server24.hostfactory.ch:3306:dbname=nism:user=tobias.moser:extra=--defaults-group-suffix=nism'
 let g:dbext_default_profile = 'psql_feldarbeit'
 
+" automatic minify of js files
 function Js_css_compress ()
   let cwd = expand('<afile>:p:h')
   let nam = expand('<afile>:t:r')
@@ -166,6 +167,7 @@ function Js_css_compress ()
     endif
   endif
 endfunction
+
 autocmd FileWritePost,BufWritePost *.js :call Js_css_compress()
 autocmd FileWritePost,BufWritePost *.css :call Js_css_compress()
 autocmd FileWritePost,BufWritePost *.less :call Js_css_compress()
