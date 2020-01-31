@@ -137,9 +137,10 @@ let g:pandoc#formatting#textwidth = 79
 let g:pandoc#formatting#mode = "sA"
 
 " db connection
+let g:dbext_default_profile_psql_adb = 'type=PGSQL:host=localhost:5432:dbname=adb:user=tobias'
 let g:dbext_default_profile_psql_feldarbeit = 'type=PGSQL:host=localhost:5432:dbname=feldarbeit:user=tobias'
 let g:dbext_default_profile_mysql_nism = 'type=MYSQL:host=server24.hostfactory.ch:3306:dbname=nism:user=tobias.moser:extra=--defaults-group-suffix=nism'
-let g:dbext_default_profile = 'psql_feldarbeit'
+let g:dbext_default_profile = 'psql_adb'
 
 " automatic minify of js files
 function Js_css_compress ()

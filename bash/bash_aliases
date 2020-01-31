@@ -1,1 +1,9 @@
 alias R="$(/usr/bin/which R) --no-save"
+# Move export GREP_OPTIONS="--color=auto" (which is deprecated) from .exports to .alias
+# Always enable colored `grep` output`
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+
+# add vegedaz command
+alias vegedaz="wine /home/tobias/.wine/drive_c/Program\ Files/Vegedaz/Vegedaz.exe"
