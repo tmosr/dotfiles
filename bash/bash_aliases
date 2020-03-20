@@ -1,2 +1,2 @@
 alias R="$(/usr/bin/which R) --no-save"
-alias vegedaz="wine $HOME/.wine/drive_c/Program Files/Vegedaz/Vegedaz.exe"
+alias vegedaz="wine '$HOME/.wine/drive_c/Program Files/Vegedaz/Vegedaz.exe'"
