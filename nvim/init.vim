@@ -61,6 +61,9 @@ Plug 'claco/jasmine.vim'
 " typescript
 Plug 'leafgarland/typescript-vim'
 
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+
 " Initialize plugin system
 call plug#end()
 
@@ -109,6 +112,9 @@ let R_assign = 0 " disable automatic replacement of underscores
 let R_in_buffer = 0 " do not use buffer
 let R_term = 'urxvt' " use urxvt as external terminal
 let R_indent_commented = 1 " 
+
+" Nerdtree toggle
+map <C-n> :NERDTreeToggle<CR>
 
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
@@ -171,3 +177,6 @@ endfunction
 autocmd FileWritePost,BufWritePost *.js :call Js_css_compress()
 autocmd FileWritePost,BufWritePost *.css :call Js_css_compress()
 autocmd FileWritePost,BufWritePost *.less :call Js_css_compress()
+
+" remap escape for shell emulator
+tnoremap <Esc> <C-\><C-n>
