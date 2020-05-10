@@ -28,7 +28,7 @@ iceweasel &
 thunderbird &
 udiskie &
 pulseaudio --start &
-statnot &
+statnot $HOME/.config/statnot/config.py &
 pomo.sh notify &
 
 # Run dwm

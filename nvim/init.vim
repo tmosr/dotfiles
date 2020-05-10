@@ -63,6 +63,11 @@ Plug 'leafgarland/typescript-vim'
 
 " Nerdtree
 Plug 'scrooloose/nerdtree'
+" Nerdtree Git extension
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" cloase all buffers but this one
+Plug 'schickling/vim-bufonly'
 
 " Initialize plugin system
 call plug#end()
