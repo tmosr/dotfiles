@@ -61,6 +61,14 @@ Plug 'claco/jasmine.vim'
 " typescript
 Plug 'leafgarland/typescript-vim'
 
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+" Nerdtree Git extension
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" cloase all buffers but this one
+Plug 'schickling/vim-bufonly'
+
 " Initialize plugin system
 call plug#end()
 
@@ -110,6 +118,9 @@ let R_in_buffer = 0 " do not use buffer
 let R_term = 'urxvt' " use urxvt as external terminal
 let R_indent_commented = 1 " 
 
+" Nerdtree toggle
+map <C-n> :NERDTreeToggle<CR>
+
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
 nnoremap  <leader>Y  "+yg_
@@ -147,7 +158,8 @@ function Js_css_compress ()
   let cwd = expand('<afile>:p:h')
   let nam = expand('<afile>:t:r')
   let ext = expand('<afile>:e')
-  let home_path = $HOME
+  let home_dir = expand('$HOME')
+  let project_dir = trim(system('git rev-parse --show-toplevel'))
   if -1 == match(nam, "[\._]src$")
     let minfname = nam.".min.".ext
   else
@@ -159,8 +171,8 @@ function Js_css_compress ()
     endif
   else
     if filewritable(cwd.'/'.minfname)
-      if ext == 'js' && executable(home_path .'/.local/bin/closure-compiler')
-        cal system( home_path .'/.local/bin/closure-compiler --js '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
+      if ext == 'js' && executable(home_dir.'/.local/bin/closure-compiler')
+        cal system( home_dir.'/.local/bin/closure-compiler --js_module_root '.project_dir.' --js '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
       elseif executable('yui-compressor')
         cal system( 'yui-compressor '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
       endif
@@ -171,3 +183,6 @@ endfunction
 autocmd FileWritePost,BufWritePost *.js :call Js_css_compress()
 autocmd FileWritePost,BufWritePost *.css :call Js_css_compress()
 autocmd FileWritePost,BufWritePost *.less :call Js_css_compress()
+
+" remap escape for shell emulator
+tnoremap <Esc> <C-\><C-n>
