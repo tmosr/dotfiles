@@ -189,7 +189,7 @@ function Js_css_compress ()
     if filewritable(cwd.'/'.minfname)
       if ext == 'js'
         if executable(npm_path.'/node_modules/.bin/babel')
-          cal system( npm_path.'/node_modules/.bin/babel --config-file '.npm_path.'/.babelrc '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
+          cal system( npm_path.'/node_modules/.bin/babel '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
         elseif executable('yui-compressor')
           cal system( 'yui-compressor '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
         endif
