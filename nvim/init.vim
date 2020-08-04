@@ -130,8 +130,7 @@ let r_indent_ess_comments = 1 " enable comment indenting
 
 " vim-R settings
 let R_assign = 0 " disable automatic replacement of underscores
-let R_in_buffer = 0 " do not use buffer
-let R_term = 'urxvt' " use urxvt as external terminal
+let R_external_term = 'urxvt' " use urxvt as external terminal
 let R_indent_commented = 1 " 
 
 " Nerdtree toggle
