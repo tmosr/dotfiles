@@ -69,11 +69,14 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " cloase all buffers but this one
 Plug 'schickling/vim-bufonly'
 
-" pymode
+" pydocstring
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+
+" python mode
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
-" python docstring
-Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+" TOML suppoert
+Plug 'cespare/vim-toml'
 
 " Initialize plugin system
 call plug#end()
@@ -102,7 +105,8 @@ set textwidth=80
 set formatoptions+=t
 
 " pydocstring config
-let g:pydocstring_doq_path='/home/tobias/.venv/bin/doq'
+let g:pydocstring_doq_path = '/home/tobias/.venv/bin/doq'
+let g:pydocstring_formatter = 'numpy'
 
 " airline config
 let g:airline#extensions#tabline#left_sep = ' '
@@ -116,6 +120,9 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 " matlab settings
 autocmd Filetype matlab setlocal ts=4 sw=4 expandtab 
 autocmd Filetype matlab match OverLength /\%81v.\+/  
+
+" python settings
+autocmd FileType python setlocal ts=4 sw=4 softtabstop=4 expandtab
 
 " R indentation settings
 let r_indent_align_args = 0   " disable alignment of function args
@@ -168,6 +175,7 @@ function Js_css_compress ()
   let nam = expand('<afile>:t:r')
   let ext = expand('<afile>:e')
   let home_dir = expand('$HOME')
+  let npm_path = home_dir.'/.npm/'
   let project_dir = trim(system('git rev-parse --show-toplevel'))
   if -1 == match(nam, "[\._]src$")
     let minfname = nam.".min.".ext
@@ -180,10 +188,12 @@ function Js_css_compress ()
     endif
   else
     if filewritable(cwd.'/'.minfname)
-      if ext == 'js' && executable(home_dir.'/.local/bin/closure-compiler')
-        cal system( home_dir.'/.local/bin/closure-compiler --js_module_root '.project_dir.' --js '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
-      elseif executable('yui-compressor')
-        cal system( 'yui-compressor '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
+      if ext == 'js'
+        if executable(npm_path.'/node_modules/.bin/babel')
+          cal system( npm_path.'/node_modules/.bin/babel '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
+        elseif executable('yui-compressor')
+          cal system( 'yui-compressor '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
+        endif
       endif
     endif
   endif
