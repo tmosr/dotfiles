@@ -69,6 +69,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " cloase all buffers but this one
 Plug 'schickling/vim-bufonly'
 
+" pymode
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+
+" python docstring
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+
 " Initialize plugin system
 call plug#end()
 
@@ -95,6 +101,9 @@ set autoindent    " enable auto (stupid) indentation
 set textwidth=80
 set formatoptions+=t
 
+" pydocstring config
+let g:pydocstring_doq_path='/home/tobias/.venv/bin/doq'
+
 " airline config
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -115,7 +124,7 @@ let r_indent_ess_comments = 1 " enable comment indenting
 " vim-R settings
 let R_assign = 0 " disable automatic replacement of underscores
 let R_in_buffer = 0 " do not use buffer
-let R_term = 'urxvt' " use urxvt as external terminal
+let R_external_term = 'urxvt' " use urxvt as external terminal
 let R_indent_commented = 1 " 
 
 " Nerdtree toggle

@@ -11,7 +11,8 @@ statnot $HOME/.config/statnot/config.py &
 pomo.sh notify &
 
 # set keyboard layout to Swiss German
-setxkbmap ch -option apple:badmap
+#setxkbmap ch -option apple:badmap
+setxkbmap ch
 
 # Run dwm
 exec dwm
