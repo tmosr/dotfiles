@@ -5,6 +5,7 @@ alias R="$(/usr/bin/which R) --no-save"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
+alias today="date '+%Y%m%d'"
 
 # add vegedaz command
 alias vegedaz="wine '$HOME/.wine/drive_c/Program Files/Vegedaz/Vegedaz.exe'"
